@@ -1,24 +1,40 @@
 
-function App() {
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/layout/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Internships from './pages/Internships';
+import Contact from './pages/Contact';
+
+function Placeholder({ title }) {
   return (
-    <main className="min-h-screen bg-[#06090D] flex items-center justify-center px-6">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-[#F5F5F5]">
-          CIPHER<span className="text-[#FE6700]">FOX</span>
-        </h1>
-
-        <p className="mt-4 text-[#A7ADB5]">
-          CODE. BUILD. SCALE.
-        </p>
-
-        <div className="mt-8">
-          <button className="rounded-lg bg-[#FE6700] px-6 py-3 font-semibold text-[#06090D] hover:shadow-[0_0_20px_rgba(254,103,0,0.25)] transition">
-            Website Development
-          </button>
-        </div>
-      </div>
+    <main className="flex min-h-[70vh] items-center justify-center px-5">
+      <h1 className="text-3xl font-bold text-[#F5F5F5]">
+        {title}
+        <span className="text-[#FE6700]">.</span>
+      </h1>
     </main>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/internships" element={<Internships />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Placeholder title="404 - Page Not Found" />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
