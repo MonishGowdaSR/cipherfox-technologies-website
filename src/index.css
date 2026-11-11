@@ -1,0 +1,40 @@
+
+@import "tailwindcss";
+
+/* CipherFox Technologies - Global Design System */
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #F5F5F5;
+  background: #06090D;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #06090D;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #FE6700;
+  color: #06090D;
+}
