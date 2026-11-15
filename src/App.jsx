@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Internships from './pages/Internships';
 import Contact from './pages/Contact';
+import CareerSupport from './pages/CareerSupport';
 
 function Placeholder({ title }) {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/internships" element={<Internships />} />
+        <Route path="/career-support" element={<CareerSupport />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Placeholder title="404 - Page Not Found" />} />
       </Routes>

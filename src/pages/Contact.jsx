@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 
 const companyEmail = 'cipherfoxtechnologies@gmail.com';
+const internshipFormUrl = 'https://forms.gle/dopZNnyQh5S4BjBe6';
 
 function SectionHeading({ eyebrow, title, description }) {
   return (
@@ -164,18 +165,17 @@ function Contact() {
                 </a>
 
                 <a
-                  href={`mailto:${companyEmail}?subject=Internship%20Enquiry%20-%20CipherFox%20Technologies`}
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#FE6700] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-[#e85d00]"
-                >
-                  Apply for Internship
-                  <ArrowUpRight size={18} />
-                </a>
+  href={internshipFormUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-lg bg-[#FE6700] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-[#e85d00]"
+>
+  Apply for Internship
+  <ArrowUpRight size={18} />
+</a>
               </div>
 
-              <p className="mt-5 text-xs leading-6 text-[#A7ADB5]">
-                Student application form: Link to be added during website
-                development.
-              </p>
+              
             </article>
 
           </div>

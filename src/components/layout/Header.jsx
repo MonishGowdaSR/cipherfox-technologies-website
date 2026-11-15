@@ -1,54 +1,67 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/logos/cipherfox-horizontal.png';
+
+const internshipFormUrl = 'https://forms.gle/dopZNnyQh5S4BjBe6';
 
 const navigation = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
   { name: 'Services', path: '/services' },
-  { name: 'Projects', path: '/projects' },
+  { name: 'Featured Projects', path: '/projects' },
   { name: 'Internships', path: '/internships' },
+  { name: 'Career & Project Support', path: '/career-support' },
   { name: 'Contact', path: '/contact' },
 ];
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const getNavClass = (isActive) =>
+    `text-sm font-medium transition-colors duration-200 ${
+      isActive
+        ? 'text-[#FE6700]'
+        : 'text-[#A7ADB5] hover:text-[#FE6700]'
+    }`;
+
   return (
     <header className="sticky top-0 z-50 border-b border-[#252C35] bg-[#06090D]/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
 
         {/* Company Logo */}
-        <Link to="/" className="flex items-center">
+        <NavLink to="/" className="flex items-center">
           <img
             src={logo}
             alt="CipherFox Technologies"
-            className="h-10 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
-        </Link>
+        </NavLink>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-7 lg:flex">
           {navigation.map((item) => (
-            <Link
+            <NavLink
               key={item.name}
               to={item.path}
-              className="text-sm font-medium text-[#A7ADB5] transition hover:text-[#FE6700]"
+              end={item.path === '/'}
+              className={({ isActive }) => getNavClass(isActive)}
             >
               {item.name}
-            </Link>
+            </NavLink>
           ))}
         </div>
 
         {/* Internship CTA */}
-        <Link
-          to="/internships"
+        <a
+          href={internshipFormUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-md bg-[#FE6700] px-5 py-3 text-sm font-semibold text-[#06090D] transition hover:bg-orange-500 lg:inline-flex"
         >
           Apply for Internship
-        </Link>
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -66,23 +79,26 @@ function Header() {
         <div className="border-t border-[#252C35] bg-[#06090D] px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-5">
             {navigation.map((item) => (
-              <Link
+              <NavLink
                 key={item.name}
                 to={item.path}
+                end={item.path === '/'}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm font-medium text-[#A7ADB5] hover:text-[#FE6700]"
+                className={({ isActive }) => getNavClass(isActive)}
               >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
 
-            <Link
-              to="/internships"
+            <a
+              href={internshipFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="rounded-md bg-[#FE6700] px-5 py-3 text-center font-semibold text-[#06090D]"
             >
               Apply for Internship
-            </Link>
+            </a>
           </div>
         </div>
       )}

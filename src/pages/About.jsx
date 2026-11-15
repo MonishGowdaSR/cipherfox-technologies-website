@@ -1,4 +1,4 @@
-
+import msmeLogo from '../assets/images/udyam-msme-logo.png';
 const technologyCapabilities = [
   {
     title: 'Frontend Development',
@@ -446,6 +446,77 @@ function About() {
           </p>
         </div>
       </section>
+      
+      {/* Udyam MSME Registration */}
+      <section className="border-y border-[#252C35] bg-[#0B1016] px-5 py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="overflow-hidden rounded-2xl border border-[#252C35] bg-[#111820]">
+            <div className="grid items-center gap-10 p-7 sm:p-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-14 lg:p-12">
+
+              {/* MSME Logo */}
+              <div className="flex items-center justify-center">
+                <div className="flex h-64 w-full max-w-xs items-center justify-center rounded-xl bg-white p-5 sm:h-72">
+                  <img
+                    src={msmeLogo}
+                    alt="Ministry of Micro, Small and Medium Enterprises, Government of India"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Registration Information */}
+              <div>
+                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#FE6700]/30 bg-[#FE6700]/10 px-4 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#FE6700]" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#FE6700]">
+                    Udyam MSME Registered
+                  </span>
+                </div>
+
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#FE6700]">
+                  About CipherFox Technologies
+                </p>
+
+                <h2 className="text-2xl font-bold leading-tight text-[#F5F5F5] sm:text-3xl">
+                  A Registered Micro Enterprise
+                  <span className="text-[#FE6700]">.</span>
+                </h2>
+
+                <p className="mt-5 text-sm leading-8 text-[#A7ADB5] sm:text-base">
+                  CipherFox Technologies is a Udyam-registered Micro Enterprise
+                  under the Ministry of Micro, Small and Medium Enterprises
+                  (MSME), Government of India.
+                </p>
+
+                <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
+                      Enterprise Classification
+                    </p>
+                    <p className="mt-2 text-lg font-bold text-[#F5F5F5]">
+                      Micro Enterprise
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
+                      Major Activity
+                    </p>
+                    <p className="mt-2 text-lg font-bold text-[#F5F5F5]">
+                      Services
+                    </p>
+                  </div>
+                </div>
+
+                <p className="mt-5 text-xs leading-6 text-[#A7ADB5]">
+                  Registered under the Udyam MSME framework, Government of India.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Company Information */}
       <section className="px-5 py-20 sm:py-24">
@@ -459,14 +530,13 @@ function About() {
             {[
               ['Company Name', 'CipherFox Technologies'],
               ['Industry', 'IT Services and Software Development'],
-              ['Business Registration', 'Registered under the Udyam MSME framework'],
               ['Location', 'Bengaluru, Karnataka, India'],
               ['Operating Model', 'Online / Remote'],
             ].map(([label, value], index) => (
               <div
                 key={label}
                 className={`grid gap-2 px-6 py-5 sm:grid-cols-2 ${
-                  index !== 4 ? 'border-b border-[#252C35]' : ''
+                  index !== 3 ? 'border-b border-[#252C35]' : ''
                 }`}
               >
                 <p className="text-sm font-medium text-[#A7ADB5]">{label}</p>

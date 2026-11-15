@@ -16,6 +16,8 @@ import {
   ChevronDown,
 } from 'lucide-react';
 
+const internshipFormUrl = 'https://forms.gle/dopZNnyQh5S4BjBe6';
+
 const programmes = [
   {
     number: '01',
@@ -163,6 +165,11 @@ const faqs = [
       'Students who successfully complete the internship and project evaluation receive an Internship Completion Certificate and Project Evaluation Report.',
   },
   {
+  question: 'Are the internship programmes paid?',
+  answer:
+    'Yes. All internship programmes offered by CipherFox Technologies are paid programmes. Applicable programme fee details are shared during the application process.',
+},
+  {
     question: 'How can I apply?',
     answer:
       'You can submit your details through the internship application form. Further programme information will be communicated during the application process.',
@@ -271,6 +278,10 @@ function Internships() {
                     {programme.title}
                   </h3>
 
+                  <span className="mt-3 inline-flex rounded-full border border-[#FE6700]/30 bg-[#FE6700]/10 px-3 py-1 text-xs font-semibold text-[#FE6700]">
+  Fee Applicable
+</span>
+
                   <p className="mt-4 text-sm leading-7 text-[#A7ADB5]">
                     {programme.description}
                   </p>
@@ -291,6 +302,15 @@ function Internships() {
                       ))}
                     </div>
                   </div>
+                                    <a
+                    href={internshipFormUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-7 inline-flex items-center gap-2 rounded-lg bg-[#FE6700] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#e85d00]"
+                  >
+                    Apply for This Programme
+                    <ArrowUpRight size={18} />
+                  </a>
                 </article>
               );
             })}
@@ -581,12 +601,14 @@ function Internships() {
           </p>
 
           <a
-            href="/contact?type=internship"
-            className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#FE6700] px-7 py-3.5 font-semibold text-white transition hover:bg-[#e85d00]"
-          >
-            Apply for Internship
-            <ArrowUpRight size={19} />
-          </a>
+  href={internshipFormUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#FE6700] px-7 py-3.5 font-semibold text-white transition hover:bg-[#e85d00]"
+>
+  Apply for Internship
+  <ArrowUpRight size={19} />
+</a>
         </div>
       </section>
 
