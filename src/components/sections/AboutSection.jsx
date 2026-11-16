@@ -66,6 +66,50 @@ function AboutSection() {
           </Link>
         </div>
 
+        {/* Udyam MSME Registration */}
+        <div className="mt-12 flex flex-col items-center gap-6 rounded-2xl border border-[#252C35] bg-[#111820] p-6 sm:flex-row sm:p-8">
+          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-xl bg-white p-3">
+            <img
+              src={msmeLogo}
+              alt="Ministry of Micro, Small and Medium Enterprises"
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+
+          <div className="flex-1 text-center sm:text-left">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#FE6700]">
+              Udyam MSME Registered
+            </p>
+
+            <h3 className="text-xl font-bold text-[#F5F5F5] sm:text-2xl">
+              Registered Micro Enterprise
+            </h3>
+
+            <p className="mt-3 text-sm leading-7 text-[#A7ADB5]">
+              CipherFox Technologies is registered under the Ministry of
+              Micro, Small and Medium Enterprises (MSME), Government of India.
+            </p>
+
+            <div className="mt-4 inline-flex flex-col gap-1 rounded-lg border border-[#252C35] bg-[#06090D] px-4 py-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
+                Udyam Registration Number
+              </span>
+
+              <span className="text-sm font-bold tracking-wide text-[#FE6700]">
+                UDYAM-KR-03-0785798
+              </span>
+            </div>
+          </div>
+
+          <Link
+            to="/about"
+            className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#FE6700] transition hover:gap-3"
+          >
+            Know More
+            <ArrowUpRight size={18} />
+          </Link>
+        </div>
+
         {/* Highlight Cards */}
         <div className="mt-16 grid gap-5 md:grid-cols-3">
           {highlights.map((item) => {
@@ -90,39 +134,6 @@ function AboutSection() {
               </div>
             );
           })}
-        </div>
-                {/* Udyam MSME Registration */}
-        <div className="mt-12 flex flex-col items-center gap-6 rounded-2xl border border-[#252C35] bg-[#111820] p-6 sm:flex-row sm:p-8">
-          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-xl bg-white p-3">
-            <img
-              src={msmeLogo}
-              alt="Ministry of Micro, Small and Medium Enterprises"
-              className="max-h-full max-w-full object-contain"
-            />
-          </div>
-
-          <div className="flex-1 text-center sm:text-left">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#FE6700]">
-              Udyam MSME Registered
-            </p>
-
-            <h3 className="text-xl font-bold text-[#F5F5F5] sm:text-2xl">
-              Registered Micro Enterprise
-            </h3>
-
-            <p className="mt-3 text-sm leading-7 text-[#A7ADB5]">
-              CipherFox Technologies is registered under the Ministry of
-              Micro, Small and Medium Enterprises (MSME), Government of India.
-            </p>
-          </div>
-
-          <Link
-            to="/about"
-            className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#FE6700] transition hover:gap-3"
-          >
-            Know More
-            <ArrowUpRight size={18} />
-          </Link>
         </div>
 
       </div>

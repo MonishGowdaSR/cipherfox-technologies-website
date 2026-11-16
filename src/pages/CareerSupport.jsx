@@ -210,14 +210,15 @@ function CareerSupport() {
 
           {/* Single Registration Button */}
           <div className="mt-10 text-center">
-            <a
-              href="/contact?type=career-support"
-              className="inline-flex items-center gap-3 rounded-lg bg-[#FE6700] px-8 py-4 font-semibold text-[#06090D] transition hover:bg-orange-500"
-            >
-              Register Your Interest
-              <ArrowUpRight size={19} />
-            </a>
-
+          <a
+  href="https://forms.gle/dq55WabutCavwpve8"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#FE6700] px-7 py-3.5 font-semibold text-[#06090D] transition hover:bg-orange-500"
+>
+  Register Your Interest
+  <ArrowUpRight size={18} />
+</a>
             <p className="mt-3 text-sm text-[#A7ADB5]">
               Select one, two or all three services.
             </p>

@@ -488,15 +488,34 @@ function About() {
                   (MSME), Government of India.
                 </p>
 
-                <div className="mt-7 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
-                      Enterprise Classification
-                    </p>
-                    <p className="mt-2 text-lg font-bold text-[#F5F5F5]">
-                      Micro Enterprise
-                    </p>
-                  </div>
+                <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
+    <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
+      Enterprise Classification
+    </p>
+    <p className="mt-2 text-lg font-bold text-[#F5F5F5]">
+      Micro Enterprise
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
+    <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
+      Major Activity
+    </p>
+    <p className="mt-2 text-lg font-bold text-[#F5F5F5]">
+      Services
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
+    <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
+      Udyam Registration Number
+    </p>
+    <p className="mt-2 break-words text-sm font-bold leading-6 text-[#FE6700]">
+      UDYAM-KR-03-0785798
+    </p>
+  </div>
+
 
                   <div className="rounded-xl border border-[#252C35] bg-[#06090D] p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-[#A7ADB5]">
