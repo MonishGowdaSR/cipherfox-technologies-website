@@ -40,7 +40,7 @@ function Header() {
         </NavLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-7 xl:flex">
           {navigation.map((item) => (
             <NavLink
               key={item.name}
@@ -53,12 +53,12 @@ function Header() {
           ))}
         </div>
 
-        {/* Internship CTA */}
+        {/* Desktop Internship CTA */}
         <a
           href={internshipFormUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-md bg-[#FE6700] px-5 py-3 text-sm font-semibold text-[#06090D] transition hover:bg-orange-500 lg:inline-flex"
+          className="hidden rounded-md bg-[#FE6700] px-5 py-3 text-sm font-semibold text-[#06090D] transition hover:bg-orange-500 xl:inline-flex"
         >
           Apply for Internship
         </a>
@@ -66,7 +66,7 @@ function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-[#F5F5F5] lg:hidden"
+          className="text-[#F5F5F5] xl:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
         >
@@ -76,7 +76,7 @@ function Header() {
 
       {/* Mobile Navigation */}
       {menuOpen && (
-        <div className="border-t border-[#252C35] bg-[#06090D] px-5 py-5 lg:hidden">
+        <div className="border-t border-[#252C35] bg-[#06090D] px-5 py-5 xl:hidden">
           <div className="flex flex-col gap-5">
             {navigation.map((item) => (
               <NavLink

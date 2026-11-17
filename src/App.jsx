@@ -1,6 +1,8 @@
 
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -8,6 +10,8 @@ import Projects from './pages/Projects';
 import Internships from './pages/Internships';
 import Contact from './pages/Contact';
 import CareerSupport from './pages/CareerSupport';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 function Placeholder({ title }) {
   return (
@@ -33,8 +37,12 @@ function App() {
         <Route path="/internships" element={<Internships />} />
         <Route path="/career-support" element={<CareerSupport />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Placeholder title="404 - Page Not Found" />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />}
+/>      <Route path="*" element={<Placeholder title="404 - Page Not Found" />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
